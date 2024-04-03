@@ -3,12 +3,15 @@ import { Sequelize } from "sequelize";
 const connectToDB = async (dbURI) => {
     console.log(`Connecting to DB: ${dbURI}`)
 
+    c
+
     const sequelize = new Sequelize(dbURI, {
         logging: false,
         define: {
             underscored: true,
             timestamps: false,
-        }
+        },
+        password: 'admin'
     })
 
     try {
